@@ -33,7 +33,7 @@ let showError = () => {
 </script>
 
 <template>
-  <div class="wrapper bg-[#141C2F] text-white h-screen">
+  <div class="wrapper bg-[#141C2F] text-white h-screen dark:text-black dark:bg-slate-100">
     <TheHeader/>
     <main class="main container mx-auto">
       <TheInput @error="showError" @send="getData"/>

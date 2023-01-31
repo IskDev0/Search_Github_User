@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <form @submit.prevent="getUser" class="flex justify-between rounded-md gap-4 bg-[#1F2A48] p-4 w-1/2 mx-auto">
+    <form @submit.prevent="getUser" class="flex justify-between rounded-md gap-4 bg-[#1F2A48] p-4 w-1/2 mx-auto dark:bg-white dark:text-black">
       <div class="flex items-center bg-transparent gap-4">
         <svg class="ml-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -8,7 +8,7 @@
               fill="#0047FD"/>
         </svg>
 
-        <input v-model="search" class="bg-transparent w-72 pl-4 py-2 placeholder-white focus:outline-none" type="text"
+        <input v-model="search" class="bg-transparent w-72 pl-4 py-2 placeholder-white focus:outline-none dark:placeholder-black" type="text"
                placeholder="Search Github username...">
       </div>
       <input class="bg-blue-500 text-white py-2 px-4 rounded-md cursor-pointer hover:bg-blue-600 active:bg-blue-600"
