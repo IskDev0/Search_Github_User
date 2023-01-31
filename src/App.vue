@@ -35,7 +35,7 @@ let showError = () => {
 <template>
   <div class="wrapper bg-[#141C2F] text-white h-screen dark:text-black dark:bg-slate-100">
     <TheHeader/>
-    <main class="main container mx-auto">
+    <main class="main container mx-auto px-4 sm:px-10">
       <TheInput @error="showError" @send="getData"/>
       <UserCard v-if="info && !hasError" :info="info"/>
       <EmptySection v-else-if="!info && !hasError"/>

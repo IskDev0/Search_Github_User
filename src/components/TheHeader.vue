@@ -1,5 +1,5 @@
 <template>
-  <header class="header py-8">
+  <header class="header py-8 px-4">
     <div class="container mx-auto flex justify-between items-center">
       <a class="stray" href="">devfinder</a>
       <div @click="switchTheme" class="switch__btn flex items-center gap-4 uppercase stray cursor-pointer">
