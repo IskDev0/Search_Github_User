@@ -3,12 +3,22 @@ import TheHeader from "./components/TheHeader.vue";
 import TheInput from "./components/TheInput.vue";
 import {ref} from "vue";
 import UserCard from "./components/UserCard.vue";
+import TheLoader from "./components/TheLoader.vue";
 
 let info = ref()
 
+let isLoaded = ref(false)
+
 let getData = (data) => {
-  info.value = data.value
-  console.log(info.value)
+  try {
+    isLoaded.value = true
+    info.value = data.value
+    console.log(info.value)
+  } catch (e) {
+    console.error(e)
+  } finally {
+    isLoaded.value = false
+  }
 }
 
 </script>
@@ -18,7 +28,8 @@ let getData = (data) => {
     <TheHeader/>
     <main class="main container mx-auto">
       <TheInput @send="getData"/>
-      <UserCard v-if="info" :info="info" />
+      <UserCard v-if="info" :info="info"/>
+      <TheLoader v-if="isLoaded"/>
     </main>
   </div>
 </template>
