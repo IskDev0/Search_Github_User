@@ -4,6 +4,7 @@ import TheInput from "./components/TheInput.vue";
 import {ref} from "vue";
 import UserCard from "./components/UserCard.vue";
 import TheLoader from "./components/TheLoader.vue";
+import EmptySection from "./components/EmptySection.vue"
 
 let info = ref()
 
@@ -29,6 +30,7 @@ let getData = (data) => {
     <main class="main container mx-auto">
       <TheInput @send="getData"/>
       <UserCard v-if="info" :info="info"/>
+      <EmptySection v-else />
       <TheLoader v-if="isLoaded"/>
     </main>
   </div>
