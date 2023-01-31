@@ -38,9 +38,9 @@ let showError = () => {
     <main class="main container mx-auto">
       <TheInput @error="showError" @send="getData"/>
       <UserCard v-if="info && !hasError" :info="info"/>
-      <EmptySection v-else-if="!info" />
+      <EmptySection v-else-if="!info && !hasError"/>
       <TheLoader v-if="isLoaded"/>
-      <NotFound v-if="hasError" />
+      <NotFound v-if="hasError"/>
     </main>
   </div>
 </template>
