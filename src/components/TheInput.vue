@@ -21,13 +21,18 @@ let search = ref("")
 
 let data = ref()
 
-let emit = defineEmits(["send"])
+let emit = defineEmits(["send", "error"])
 
 let getUser = async () => {
   let res = await fetch(`https://api.github.com/users/${search.value}`)
-  data.value = await res.json()
-  emit("send", data)
-  search.value = ""
+  if (res.status === 404){
+    emit("error")
+    search.value = ""
+  }else{
+    data.value = await res.json()
+    emit("send", data)
+    search.value = ""
+  }
 }
 
 </script>
