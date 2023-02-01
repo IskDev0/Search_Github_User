@@ -3,7 +3,3 @@
     <h1 class="text-center">Enter github username to get data</h1>
   </div>
 </template>
-
-<script>
-
-</script>

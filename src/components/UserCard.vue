@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#1F2A48] w-full mx-auto p-12 mt-10 rounded-lg dark:bg-white">
+  <div class="bg-[#1F2A48] w-full mx-auto p-12 my-10 rounded-lg dark:bg-white">
     <div class="flex flex-col gap-4 text-center items-center sm:flex-row sm:text-left sm:items-start justify-between">
       <img class="rounded-full w-24" :src="info.avatar_url" alt="">
       <div class="w-full sm:w-3/4">
@@ -12,7 +12,8 @@
             <a class="text-blue-600" :href="`https://github.com/${info.login}`">@{{ info.login }}</a>
             <p class="text-gray-400 mt-4">{{ info.bio ? info.bio : "This profile has no bio" }}</p>
           </div>
-          <div class="flex flex-col sm:flex-row sm:text-center sm:gap-4 justify-between bg-[#141C2F] py-4 px-8 rounded-lg my-8 dark:bg-slate-100">
+          <div
+              class="flex flex-col sm:flex-row sm:text-center sm:gap-4 justify-between bg-[#141C2F] py-4 px-8 rounded-lg my-8 dark:bg-slate-100">
             <div class="flex flex-col">
               <span>Repos</span>
               <span class="text-2xl font-bold">{{ info.public_repos }}</span>

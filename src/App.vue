@@ -1,7 +1,7 @@
 <script setup>
+import {ref} from "vue";
 import TheHeader from "./components/TheHeader.vue";
 import TheInput from "./components/TheInput.vue";
-import {ref} from "vue";
 import UserCard from "./components/UserCard.vue";
 import TheLoader from "./components/TheLoader.vue";
 import EmptySection from "./components/EmptySection.vue"
@@ -18,7 +18,6 @@ let getData = (data) => {
     hasError.value = false
     isLoaded.value = true
     info.value = data.value
-    console.log(info.value)
   } catch (e) {
     console.error(e)
   } finally {
