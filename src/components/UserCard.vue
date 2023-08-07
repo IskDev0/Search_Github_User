@@ -13,7 +13,7 @@
             <p class="text-gray-400 mt-4">{{ info.bio ? info.bio : "This profile has no bio" }}</p>
           </div>
           <div
-              class="flex flex-col sm:flex-row sm:text-center sm:gap-4 justify-between bg-[#141C2F] py-4 px-8 rounded-lg my-8 dark:bg-slate-100">
+              class="flex flex-col gap-4 sm:flex-row sm:text-center sm:gap-4 justify-between bg-[#141C2F] py-4 px-8 rounded-lg my-8 dark:bg-slate-100">
             <div class="flex flex-col">
               <span>Repos</span>
               <span class="text-2xl font-bold">{{ info.public_repos }}</span>
@@ -45,7 +45,7 @@
                     fill="#fff"/>
               </svg>
               {{ info.twitter_username ? info.twitter_username : "Not available" }}</a>
-            <a :href="info.blog" class="flex gap-4">
+            <a :href="`https://${info.blog}`" class="flex gap-4">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     class="dark:fill-black"
